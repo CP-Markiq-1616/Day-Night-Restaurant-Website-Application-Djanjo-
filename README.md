@@ -32,6 +32,9 @@ Please create a medium strength password and write it down. The backend system w
 
 Once logged in with username and password, you will be able to view your order history if you have any previous orders.
 
+<img width="600" height="600" alt="Signup Page Readme" src="https://github.com/user-attachments/assets/62d3611a-f092-40c8-8c31-536a2e1fc9e6" />
+
+
 
 **Number 3:**
 
