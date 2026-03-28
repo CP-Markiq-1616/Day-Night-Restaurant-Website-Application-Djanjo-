@@ -1,4 +1,6 @@
-**Welcome To The Day & Night Restaurant Website**
+# Welcome To The Day & Night Restaurant Website
+
+<br> 
 
 Please use the following link: 
 
@@ -6,10 +8,31 @@ https://day-night-restaurant.duckdns.org
 
 For best results please use a Windows computer with Google Chrome.
 
+<br> 
 
 
+## Tech Stack
 
-Key Points
+Python
+
+Django
+
+HTML
+
+CSS
+
+Amazon Workspace (Cloud Provider)
+
+EC2 & Ubuntu (Virtual Computer & OS via Linux)
+
+Gunicorn (App Server)
+
+Nginx (Web Server)
+
+<br> 
+
+
+## Key Points
 
 
 **Number 1:**
@@ -18,6 +41,9 @@ When you are finished adding your items to the cart from the "Order Take Out" sc
 
 
 <img width="600" height="600" alt="View Total Readme" src="https://github.com/user-attachments/assets/72e7e655-b9d5-4926-8913-7b9683e69026" />
+
+
+<br>
 
 
 **Number 2:**
@@ -34,6 +60,7 @@ Once logged in with username and password, you will be able to view your order h
 
 <img width="600" height="600" alt="Signup Page Readme" src="https://github.com/user-attachments/assets/62d3611a-f092-40c8-8c31-536a2e1fc9e6" />
 
+<br> 
 
 
 **Number 3:**
@@ -54,6 +81,7 @@ Once the new password is set, you will be prompted to log in.
 
 ** Please see photos below. **
 
+<br> 
 
 <img width="600" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/6e00241a-e78b-43c4-9eb0-521cf21f00dd" />
 
