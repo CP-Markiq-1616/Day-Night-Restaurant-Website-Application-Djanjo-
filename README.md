@@ -12,7 +12,7 @@ For best results please use a Windows computer with Google Chrome.
 Key Points
 
 
-Number 1:
+**Number 1:**
 
 When you are finished adding your items to the cart from the "Order Take Out" screen, press the "View Total" button to view your total before proceeding to checkout. 
 
@@ -20,7 +20,7 @@ When you are finished adding your items to the cart from the "Order Take Out" sc
 <img width="600" height="600" alt="View Total Readme" src="https://github.com/user-attachments/assets/72e7e655-b9d5-4926-8913-7b9683e69026" />
 
 
-Number 2:
+**Number 2:**
 
 You do not have to use a real email address to sign up.
 
@@ -33,9 +33,9 @@ Please create a medium strength password and write it down. The backend system w
 Once logged in with username and password, you will be able to view your order history if you have any previous orders.
 
 
-Number 3:
+**Number 3:**
 
-The "Forgot Password" button is fully functional. 
+The "Forgot Password" button is fully functional.
 
 After clicking forgot password at the login screen, you will be prompted to enter the email address that was used to sign up.
 
@@ -49,7 +49,7 @@ If you have retreived the link from me, paste it into your browser and you will 
 
 Once the new password is set, you will be prompted to log in.
 
-Please see photos below.
+** Please see photos below. **
 
 
 <img width="600" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/6e00241a-e78b-43c4-9eb0-521cf21f00dd" />
