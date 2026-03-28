@@ -22,7 +22,7 @@ When you are finished adding your items to the cart from the "Order Take Out" sc
 
 **Number 2:**
 
-You do not have to use a real email address to sign up.
+You do not need to use a real email address to sign up.
 
 Username can be a name and a number such as "Bob_User789" for example.
 
