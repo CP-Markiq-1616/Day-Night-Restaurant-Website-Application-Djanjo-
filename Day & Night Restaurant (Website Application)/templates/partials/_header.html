@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="navbar">
+
+    <div class="nav-links">
+        <h2><a href="{% url 'homepage' %}"> Day & Night</a></h2>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about_page' %}">About</a>
+        <a href="{% url 'appetizers' %}">Appetizers</a>
+        <a href="{% url 'entrees' %}">Entrees</a>
+        <a href="{% url 'drinks' %}">Drinks</a>
+        <a href="{% url 'desserts' %}">Desserts</a>
+        <a href="{% url 'reservation' %}">Reservations</a>
+        <a href="{% url 'take_out' %}">Order Take Out</a>
+        <a href="{% url 'cart_view' %}">Cart</a>
+
+    </div>
+
+
+    {% if user.is_authenticated %}
+
+        <p>Welcome {{ user.username }} </p>
+
+
+
+        <form action="{% url 'order_history' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">My Orders</button>
+        </form>
+
+
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Log Out</button>
+        </form>
+
+
+    {% else %}
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Login</button>
+        </form>
+        <form action="{% url 'signup_page' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Sign Up</button>
+        </form>
+
+    {% endif %}
+
+</div>
+

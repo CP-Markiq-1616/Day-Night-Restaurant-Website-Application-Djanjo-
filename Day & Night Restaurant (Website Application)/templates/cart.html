@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <body class="no-fade">
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <title>Your Cart</title>
+
+    </head>
+    <body>
+    <h1>Shopping Cart</h1>
+
+
+    {% if items %}
+        <table>
+            <tr>
+
+                <th>Item & Quantity</th>
+                <th></th>
+                <th>Total</th>
+            </tr>
+            {% for line in items %}
+
+
+                <tr>
+                    <td>
+                        {% if line.item_type == "appetizer" %}
+                            {{ line.item.appetizer_name }}
+
+
+                            <form method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        formaction="{% url 'decrease_cart_quantity_button' line.item_type line.item.id %}">
+                                    -
+                                </button>
+
+                                x{{ line.quantity }}
+
+
+                                <button type="submit"
+                                        formaction="{% url 'increase_cart_quantity_button' line.item_type line.item.id %}">
+                                    +
+                                </button>
+                            </form>
+
+
+
+                        {% elif line.item_type == "entree" %}
+                            {{ line.item.entree_name }}
+
+
+                            <form method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        formaction="{% url 'decrease_cart_quantity_button' line.item_type line.item.id %}">
+                                    -
+                                </button>
+
+
+                                x{{ line.quantity }}
+
+                                <button type="submit"
+                                        formaction="{% url 'increase_cart_quantity_button' line.item_type line.item.id %}">
+                                    +
+                                </button>
+                            </form>
+
+
+                        {% elif line.item_type == "drink" %}
+                            {{ line.item.drink_name }}
+                            <form method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        formaction="{% url 'decrease_cart_quantity_button' line.item_type line.item.id %}">
+                                    -
+                                </button>
+
+
+
+                                x{{ line.quantity }}
+
+
+                                <button type="submit"
+                                        formaction="{% url 'increase_cart_quantity_button' line.item_type line.item.id %}">
+                                    +
+                                </button>
+                            </form>
+
+
+
+                        {% elif line.item_type == "dessert" %}
+                            {{ line.item.dessert_name }}
+                            <form method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        formaction="{% url 'decrease_cart_quantity_button' line.item_type line.item.id %}">
+                                    -
+                                </button>
+
+
+                                x{{ line.quantity }}
+
+                                <button type="submit"
+                                        formaction="{% url 'increase_cart_quantity_button' line.item_type line.item.id %}">
+                                    +
+                                </button>
+                            </form>
+
+
+                        {% endif %}
+                    </td>
+
+
+                    <td></td>
+                    <td>${{ line.item_total }}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h3>Total: ${{ total }}</h3>
+
+
+
+        <p></p>
+        <form method="POST" action="{% url 'take_out' %}">
+            {% csrf_token %}
+            <button type="submit">Continue Shopping</button>
+        </form>
+
+        <p></p>
+
+        <a href="{% url 'clear_cart' %}">
+            <button type="button">Clear Cart</button>
+        </a>
+
+        <p></p>
+
+        <form method="POST" action="{% url 'checkout_screen' %}">
+            {% csrf_token %}
+            <button type="submit">Checkout</button>
+        </form>
+
+
+    {% else %}
+        <p>Your cart is empty.</p>
+        <p></p>
+        <form method="POST" action="{% url 'take_out' %}">
+            {% csrf_token %}
+            <button type="submit"> Order Takeout</button>
+        </form>
+    {% endif %}
+    </body>
+    </html>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,466 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #f8f8f7;*/
+    background-color: black;
+    color: white;
+
+    margin: 0;
+    padding: 40px;
+
+
+}
+th, td { /*This keeps tables aligned*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+body {
+    animation: fadeIn 1.0s ease-in-out;
+}
+body.no-fade {
+    animation: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1%;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: goldenrod;
+}
+
+table {
+    color: goldenrod;
+    width: 50%;
+    border-collapse: collapse;
+    background-color: black;;
+
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid goldenrod;
+
+
+}
+
+button {
+    background-color: goldenrod;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #dbdbdb;
+}
+
+
+/*Navigation*//*Navigation*//*Navigation*//*Navigation*//*Navigation*//*Navigation*//*Navigation*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: goldenrod;
+    padding: 15px 30px;
+    margin-bottom: 40px;
+
+    /*max-width: 1770px;   !* controls how wide the bar can be *!*/
+    width: 100%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    flex-wrap: nowrap; /*keeps nav bar content from wrapping while zooming*/
+
+    box-sizing: border-box;  /*keeps nav bar in a box shape*/
+
+    min-width: max-content; /*keeps content and nac bar box even while zooming */
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: 500;
+    white-space: nowrap;
+    /*flex-shrink: 0;*/
+}
+
+.nav-links a:hover {
+    color: #e1e1e1; /*grenn yellow is adff2f*/
+
+}
+
+/*.links a {*/
+/*    color: purple;*/
+/*    text-decoration: none;*/
+/*    margin-left: 40px;    !*this is the spacing between nav buttons *!*/
+/*    */
+
+/*}*/
+
+
+/*Menu*//*Menu*//*Menu*//*Menu*//*Menu*//*Menu*//*Menu*//*Menu*//*Menu*//*Menu*/
+
+.menu_page {
+    align-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 20px; /* space between items */
+    /*!*width: 100%;*! this makes zoom neater but wont stay in the middle, ok for now */
+    /*max-width: 100px; this makes zoom neater but wont stay in the middle, ok for now *!*/
+}
+
+.menu_page_2 {
+
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: grid; /* Makes items horizontal */
+    grid-template-columns: repeat(4, 1fr); /*how many items per 1 line*/
+    gap: 20px; /* Spacing between items */
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+
+.menu_page li {
+    text-align: center; /* center image and name */
+}
+
+.menu_page_2 li {
+    text-align: center; /* center image and name */
+}
+
+
+/* clickable name/price styling */
+.menu_item_link a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: goldenrod; /* golden button */
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+    width: 500px;
+    height: auto;
+
+}
+
+.menu_item_link_2 a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: goldenrod; /* golden button */
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+    width: 400px;
+    height: auto;
+
+
+}
+
+.menu_item_link_cart a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: goldenrod; /* golden button */
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+    width: 100px;
+    height: auto;
+
+}
+
+.menu_item_link_takeout a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: goldenrod; /* golden button */
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+    width: 100px;
+    height: auto;
+
+}
+
+/* clickable image styling */
+.menu_image_link img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+.menu_image_link_2 img {
+    display: inline;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 1px;
+
+}
+
+.menu_item_link a:hover {
+    background-color: rgb(204, 204, 204); /* Darker on hover */
+}
+
+.menu_item_link_2 a:hover {
+    background-color: rgb(204, 204, 204); /* Darker on hover */
+}
+
+.menu_item_link_cart a:hover {
+    background-color: rgb(204, 204, 204); /* Darker on hover */
+}
+
+.menu_item_link_cart_2 a:hover {
+    background-color: rgb(204, 204, 204); /* Darker on hover */
+}
+
+
+/*.menu_page {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2, 1fr); !* 2 items per row *!*/
+/*    gap: 20px; !* space between items *!*/
+/*}*/
+
+/*.menu_page li {*/
+/*    text-align: center; !* center image and name *!*/
+/*    .menu_page li {*/
+/*    display: flex;*/
+/*    align-items: center;      !* vertically align image + link *!*/
+/*    gap: 25px;*/
+/*}*/
+
+/*!* button *!*/
+/*.menu_page li a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*    background-color: goldenrod;*/
+/*    padding: 10px 18px;*/
+/*    border-radius: 10px;*/
+/*    transition: background 0.5s;*/
+
+
+/*    .menu_images {*/
+/*        width: 100%;*/
+/*        max-width: 250px;*/
+/*        height: auto;*/
+/*        border-radius: 8px;*/
+/*    }*/
+
+/*    .menu_item_link {*/
+/*        display: block;*/
+/*        text-decoration: none;*/
+/*        color: goldenrod;*/
+/*        font-weight: bold;*/
+/*        font-size: 18px;*/
+/*        margin-top: 10px;*/
+/*    }*/
+
+
+/*.menu_page {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+
+/*    display: flex;*/
+/*    flex-direction: column;   !* stack menu items vertically *!*/
+/*    gap: 30px;*/
+/*}*/
+
+/*!* each menu item *!*/
+/*.menu_page li {*/
+/*    display: flex;*/
+/*    align-items: center;      !* vertically align image + link *!*/
+/*    gap: 25px;*/
+/*}*/
+
+/*!* image *!*/
+/*.menu_images {*/
+/*    width: 200px;             !* fixed image size keeps layout stable *!*/
+/*    height: auto;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*!* button *!*/
+/*.menu_page li a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*    background-color: goldenrod;*/
+/*    padding: 10px 18px;*/
+/*    border-radius: 10px;*/
+/*    transition: background 0.5s;*/
+
+/*    white-space: nowrap;      !* prevents text wrapping *!*/
+/*}*/
+
+
+/*.menu_images {*/
+/*    margin-left: 10px;*/
+/*    height: 40px;*/
+/*    width: 500px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+
+/*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*//*drinks*/
+
+.drinks_page {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Makes items horizontal */
+    gap: 20px; /* Spacing between items */
+}
+
+.drinks_page li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    background-color: goldenrod; /* Button color */
+    padding: 8px 12px; /* Add padding */
+    border-radius: 4px; /* Rounded corners */
+    display: inline-block; /* Allows padding to apply */
+    transition: background 0.3s; /* Smooth hover effect */
+
+}
+
+.drinks_page li a:hover {
+    background-color: rgb(255, 47, 47); /* Darker on hover */
+}
+
+.drinks_page li {
+    margin-bottom: 50px; /* space between items */
+    margin-right: 50px;
+}
+
+/*take out*//*take out*//*take out*//*take out*//*take out*//*take out*//*take out*//*take out*//*take out*//*take out*/
+
+.take_out_page {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Makes items horizontal */
+    gap: 20px; /* Spacing between items */
+}
+
+.take_out_page li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    background-color: goldenrod; /* Button color */
+    padding: 8px 12px; /* Add padding */
+    border-radius: 4px; /* Rounded corners */
+    display: inline-block; /* Allows padding to apply */
+    transition: background 0.3s; /* Smooth hover effect */
+
+
+}
+
+.take_out_page_button {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    background-color: #d71313; /* Button color */
+    padding: 8px 12px; /* Add padding */
+    border-radius: 4px; /* Rounded corners */
+    display: inline-block; /* Allows padding to apply */
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+.take_out_page li a:hover {
+    background-color: rgb(204, 204, 204); /* Darker on hover */
+}
+
+.take_out_page li {
+    margin-bottom: 10px; /* space between items */
+}
+
+.image-container img {
+    display: block; /* makes the img a block element */
+    margin: 40px auto; /* top/bottom 40px, horizontally centered */
+    max-width: 2000px; /* optional: scales image for smaller screens */
+    height: 650px; /* keeps aspect ratio */
+}
+
+.image-container-emoji img {
+    display: block; /* makes the img a block element */
+    margin: 40px auto; /* top/bottom 40px, horizontally centered */
+    max-width: 100%; /* optional: scales image for smaller screens */
+    height: auto; /* keeps aspect ratio */
+}
+
+.bottom_links {
+    margin-top: 100px;
+    margin-left: 00px;
+
+}
+
+.homepage_image {
+    /*display: block;      !* makes the img a block element *!*/
+    /*margin: center;   !*margin is how far down *!*/
+    /*margin-left: 50px;   !*Margin left and right are backwards*!*/
+    display: block; /* makes the img a block element */
+    margin: 40px auto; /* top/bottom 40px, horizontally centered */
+    max-width: 100%; /* optional: scales image for smaller screens */
+    height: auto;
+
+
+}
+
+.errorlist { /*this hides the bullet point after  adding required=True, error_messages={"required":" "} inside checkout_screen model*/
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+

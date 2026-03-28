@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <body class="no-fade">
+
+    <h1>Take Out </h1>
+
+
+    <div id="mini-cart">
+        {% include "partials/_cart.html" %}
+    </div>
+
+
+    <h2>Appetizers</h2>
+
+    <ul class="menu_page_2">
+
+        {% for item in appetizers %}
+            <li>
+
+                <div class=menu_item_link_2>
+
+                    <a href="{% url 'appetizers_detail' item.id %}">
+                        {{ item.appetizer_name }}: ${{ item.appetizer_price }}
+                    </a>
+
+                </div>
+
+
+                <a href="{% url "appetizers_detail" item.id %}">
+                    <img src="{{ item.appetizer_image.url }}" width="200">
+                </a>
+
+
+                <p></p>
+                <form method="POST" action="{% url 'add_to_cart' 'appetizer' item.id %}"
+                      class="cart-form">
+
+                    {% csrf_token %}
+                    <button type="submit"> Add To Cart</button>
+
+
+                    <p></p>
+
+                </form>
+            </li>
+        {% empty %}
+            <li>No appetizer items available.</li>
+        {% endfor %}
+    </ul>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <h2>Entrees</h2>
+
+    <ul class="menu_page_2">
+        {% for item in entrees %}
+
+            <li>
+
+
+                <div class=menu_item_link_2>
+                    <a href="{% url 'entrees_detail' item.id %}">
+                        {{ item.entree_name }}: ${{ item.entree_price }}
+                    </a>
+                </div>
+
+
+                <a href="{% url "entrees_detail" item.id %}">
+                    <img src="{{ item.entree_image.url }}" width="200">
+                </a>
+
+
+                <p></p>
+                <form method="POST" action="{% url 'add_to_cart' 'entree' item.id %}"
+                      class="cart-form">
+
+                    {% csrf_token %}
+                    <button type="submit"> Add To Cart</button>
+                </form>
+
+
+            </li>
+        {% empty %}
+            <li>No entree items available.</li>
+        {% endfor %}
+    </ul>
+
+
+
+    <h2>Drinks</h2>
+    <ul class="menu_page_2">
+        {% for item in drink %}
+
+            <li>
+
+
+                <div class=menu_item_link_2>
+                    <a href="{% url 'drink_detail' item.id %}">
+                        {{ item.drink_name }}: ${{ item.drink_price }}
+                    </a>
+                </div>
+
+                <a href="{% url "drink_detail" item.id %}">
+                    <img src="{{ item.drink_image.url }}" width="200">
+                </a>
+
+
+                <p></p>
+                <form method="POST" action="{% url 'add_to_cart' 'drink' item.id %}"
+                      class="cart-form">
+
+                    {% csrf_token %}
+                    <button type="submit"> Add To Cart</button>
+                </form>
+
+
+            </li>
+        {% empty %}
+            <li>No drink items available.</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Desserts</h2>
+
+    <ul class="menu_page_2">
+        {% for item in desserts %}
+
+            <li>
+
+
+                <div class=menu_item_link_2>
+                    <a href="{% url "desserts_detail" item.id %}">
+                        {{ item.dessert_name }}: ${{ item.dessert_price }}
+                    </a>
+                </div>
+
+
+                <a href="{% url "desserts_detail" item.id %}">
+                    <img src="{{ item.dessert_image.url }}" width="200">
+                </a>
+
+
+                <p></p>
+                <form method="POST" action="{% url 'add_to_cart' 'dessert' item.id %}"
+                      class="cart-form">
+
+                    {% csrf_token %}
+                    <button type="submit"> Add To Cart</button>
+                </form>
+
+
+            </li>
+        {% empty %}
+            <li>No dessert items available.</li>
+        {% endfor %}
+    </ul>
+
+
+    <p></p>
+    <form method="POST" action="{% url 'homepage' %}">
+        {% csrf_token %}
+        <button type="submit">Homepage</button>
+    </form>
+    <p></p>
+    <form method="POST" action="{% url 'cart_view' %}">
+        {% csrf_token %}
+        <button type="submit">Go To Cart</button>
+    </form>
+    <p></p>
+    <form method="POST" action="{% url 'checkout_screen' %}">
+        {% csrf_token %}
+        <button type="submit">Checkout</button>
+    </form>
+
+
+
+
+{#AJAX Script to make background requests to the server and updating the page without refresh#}
+{#This stops the page from jumping #}
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".cart-form").forEach(form => {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    fetch(this.action, {
+                        method: "POST",
+                        body: new FormData(this),
+                        headers: {
+                            "X-CSRFToken": this.querySelector('[name=csrfmiddlewaretoken]').value
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("Added to cart");
+
+                            // Change button text temporarily
+                            const button = this.querySelector("button");
+                            const originalText = button.innerText;
+
+                            button.innerText = "✔ Added";
+                            button.disabled = true; // prevent spam clicking
+
+                            setTimeout(() => {
+                                button.innerText = originalText;
+                                button.disabled = false;
+                            }, 1200);
+
+                            // Update cart count if exists
+                            const cartCount = document.getElementById("cart-count");
+                            if (cartCount && data.cart_count !== undefined) {
+                                cartCount.innerText = data.cart_count;
+
+                            }
+                            const miniCartDiv = document.getElementById("mini-cart");
+                            if (miniCartDiv && data.mini_cart_html) {
+                                miniCartDiv.innerHTML = data.mini_cart_html;
+                            }
+                        })
+                        .catch(error => console.error("Error:", error));
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

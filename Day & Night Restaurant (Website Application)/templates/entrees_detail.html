@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <title>{{ entree_index.entree_name }}</title>
+
+
+    <h2>{{ entree_index.entree_name }}</h2>
+
+
+    <p><strong>Description:</strong> {{ entree_index.entree_description }}</p>
+    <p><strong>Price:</strong> ${{ entree_index.entree_price }}</p>
+
+    <img src="{{ entree_index.entree_image.url }}" width="700">
+
+    <p></p>
+    <form method="POST" action="{% url 'entrees' %}">
+        {% csrf_token %}
+        <button type="submit"> Entrees</button>
+    </form>
+
+    <p></p>
+    <form method="POST" action="{% url 'take_out' %}">
+        {% csrf_token %}
+        <button type="submit"> Order Takeout</button>
+    </form>
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <h1> Make Your Reservation Here! </h1>
+
+    <form action="" method="post" style="background-color: black;">
+        {% csrf_token %}
+        {{ reservation_form.as_p }}
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+
+    <p></p>
+
+    <form method="POST" action="{% url 'homepage' %}">
+        {% csrf_token %}
+        <button type="submit">Homepage</button>
+    </form>
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <body class="no-fade">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Checkout</title>
+    </head>
+    <body>
+
+    <h1>Checkout</h1>
+
+
+    <h2>Your Order</h2>
+
+    {% if cart_items %}
+        <ul>
+            {% for line in cart_items %}
+                <li>
+
+                    <td>
+
+                        {% if line.item_type == "appetizer" %}
+                            {{ line.item.appetizer_name }}
+                            <td> (x{{ line.quantity }}):</td>
+                            <td>${{ line.item_total }}</td>
+
+
+
+
+                        {% elif line.item_type == "entree" %}
+                            {{ line.item.entree_name }}
+                            <td> (x{{ line.quantity }}):</td>
+                            <td>${{ line.item_total }}</td>
+
+
+
+                        {% elif line.item_type == "drink" %}
+                            {{ line.item.drink_name }}
+                            <td> (x{{ line.quantity }}):</td>
+                            <td>${{ line.item_total }}</td>
+
+
+
+                        {% elif line.item_type == "dessert" %}
+                            {{ line.item.dessert_name }}
+                            <td> (x{{ line.quantity }}):</td>
+                            <td>${{ line.item_total }}</td>
+
+
+                        {% endif %}
+
+
+
+                </li>
+            {% endfor %}
+        </ul>
+        <h3>Total: ${{ cart_total }}</h3>
+    {% endif %}
+
+    <hr>
+
+
+
+    {#Checkout form section #}
+
+    <h2>Customer Information</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Place Order</button>
+    </form>
+
+
+
+    <p></p>
+    <form method="POST" action="{% url 'take_out' %}">
+        {% csrf_token %}
+        <button type="submit">Continue Shopping</button>
+    </form>
+{% endblock %}
+
+</body>
+</html>
+

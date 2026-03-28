@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <title>{{ drink_index.drink_name }}</title>
+
+
+
+    <h2>{{ drink_index.drink_name }}</h2>
+
+    <p><strong>Description:</strong> {{ drink_index.drink_description }}</p>
+    <p><strong>Price:</strong> ${{ drink_index.drink_price }}</p>
+
+    <img src="{{ drink_index.drink_image.url }}" width="700">
+
+
+    <p></p>
+
+    <form method="POST" action="{% url 'drinks' %}">
+        {% csrf_token %}
+        <button type="submit"> Drinks</button>
+    </form>
+
+    <p></p>
+
+    <form method="POST" action="{% url 'take_out' %}">
+        {% csrf_token %}
+        <button type="submit"> Order Takeout</button>
+    </form>
+
+
+
+{% endblock %}
+

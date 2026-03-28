@@ -1,0 +1,90 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<h3>Cart</h3>
+
+{% if cart_items %}
+
+    <table>
+        <tr>
+
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Total</th>
+
+        </tr>
+
+        {% for  item in cart_items %}
+
+
+            <tr>
+                <td> {{ item.item }}</td>
+                <td>
+
+
+                    <form method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit"
+                                formaction="{% url 'decrease_cart_quantity_button' item.item_type item.item.id %}">
+                            -
+                        </button>
+
+                        x{{ item.quantity }}
+
+
+                        <button type="submit"
+                                formaction="{% url 'increase_cart_quantity_button' item.item_type item.item.id %}">
+                            +
+                        </button>
+                    </form>
+
+                </td>
+
+
+
+                <td>${{ item.item_total }}</td>
+            </tr>
+
+
+        {% empty %}
+            <tr>
+                <td colspan="3" style="text-align:center;">
+                    Your cart is empty.
+                </td>
+
+            </tr>
+
+
+        {% endfor %}
+
+
+    </table>
+    <p></p>
+
+    <a href="{% url 'clear_cart' %}">
+        <button type="button">Clear Cart</button>
+    </a>
+
+    <p></p>
+    <form method="POST" action="{% url 'cart_view' %}">
+        {% csrf_token %}
+        <button type="submit">View Total</button>
+    </form>
+
+    <p></p>
+
+    <a href="{% url 'checkout_screen' %}">
+        <button type="button">Checkout</button>
+    </a>
+
+{% else %}
+    <p style="text-align:center;">Your cart is empty.</p>
+
+
+{% endif %}
+
+
+
+
+
