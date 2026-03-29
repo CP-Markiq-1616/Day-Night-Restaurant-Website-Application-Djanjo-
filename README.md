@@ -64,7 +64,8 @@ Database: MySQL
 When you are finished adding your items to the cart from the "Order Take Out" screen, press the "View Total" button to view your total before proceeding to checkout. 
 
 
-<img width="600" height="600" alt="View Total Readme" src="https://github.com/user-attachments/assets/72e7e655-b9d5-4926-8913-7b9683e69026" />
+<img width="600" height="600" alt="View Total Readme" src="https://github.com/user-attachments/assets/476a7582-1f9a-47eb-971b-018fed8bd40c" />
+
 
 
 <br>
@@ -82,7 +83,8 @@ Please create a medium strength password and write it down. The backend system w
 
 Once logged in with username and password, you will be able to view your order history and reorder if you have any previous orders.
 
-<img width="600" height="600" alt="Signup Page Readme" src="https://github.com/user-attachments/assets/62d3611a-f092-40c8-8c31-536a2e1fc9e6" />
+<img width="600" height="600" alt="Signup Page Readme" src="https://github.com/user-attachments/assets/8a4ecd37-7aa3-4930-b9dd-63ac1545e407" />
+
 
 <br> 
 
@@ -107,16 +109,21 @@ Once the new password is set, you will be prompted to log in.
 
 <br> 
 
-<img width="600" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/6e00241a-e78b-43c4-9eb0-521cf21f00dd" />
+<img width="600" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/b8d7a26d-b2c4-4f4f-b70d-6bd7eb94293f" />
 
-<img width="600" height="600" alt="Send Link Readme" src="https://github.com/user-attachments/assets/12fbec9e-7315-438f-a09b-9d39c65187bf" />
 
-<img width="600" height="600" alt="Link Sent Readme (2)" src="https://github.com/user-attachments/assets/882a6acf-1d77-4f45-bf63-f08277843ecc" />
+<img width="600" height="600" alt="Send Link Readme" src="https://github.com/user-attachments/assets/6def55fa-0791-478c-8d2a-c23dfc38c1d7" />
 
-<img width="600" height="600" alt="Link Sent Readme" src="https://github.com/user-attachments/assets/875ef795-4ab9-4364-b1a8-cacf95301a30" />
+<img width="600" height="600" alt="Link Sent Readme (2)" src="https://github.com/user-attachments/assets/0798533a-e4a0-492d-b332-dcaea21bd17e" />
 
-<img width="600" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/27a7b0ad-df54-4bfd-8d05-77ee60e196e3" />
 
-<img width="600" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8a4e67cf-0219-4f8e-9fed-a34b83d316a0" />
+<img width="600" height="600" alt="Link Sent Readme" src="https://github.com/user-attachments/assets/ea688e6a-76c5-484a-b395-1ce9b96d1cf4" />
 
-<img width="600" height="600" alt="Login Return Readme" src="https://github.com/user-attachments/assets/c684d294-eb7f-472b-9181-b0b5b10ef81c" />
+<img width="600" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/d9cd8ab4-f5a9-472f-8b2f-c31549135b89" />
+
+
+<img width="600" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8e6e703b-cca8-46ad-9200-23a6d8846b1f" />
+
+
+<img width="537" height="400" alt="Login Return Readme" src="https://github.com/user-attachments/assets/eff0127f-7118-4b02-99a6-fa0208c34e25" />
+
