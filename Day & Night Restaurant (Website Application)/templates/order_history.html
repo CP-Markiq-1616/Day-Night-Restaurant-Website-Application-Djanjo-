@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <h1>Order History</h1>
+
+    {% for order in previous_orders %}
+
+        <div class="order-block">
+            <h3>Order #{{ order.id }}</h3>
+            <p>Name: {{ order.Customer_Name }}</p>
+            <p>Date: {{ order.Created_at }}</p>
+
+            <ul>
+                {% for item in order.items.all %}
+                    <li>{{ item.order_item_name }} - {{ item.order_item_quantity }} x ${{ item.order_item_price }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Total: ${{ order.Total_Price }}</h3>
+
+            <form action="{% url 'reorder_function' order.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Reorder</button>
+            </form>
+
+            <hr>
+        </div>
+
+    {% empty %}
+        <p>You have no orders yet.</p>
+
+        <p></p>
+
+        <form method="POST" action="{% url 'take_out' %}">
+            {% csrf_token %}
+            <button type="submit"> Order Takeout</button>
+        </form>
+    {% endfor %}
+
+{% endblock %}

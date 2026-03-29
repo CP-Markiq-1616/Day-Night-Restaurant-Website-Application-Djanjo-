@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<body class="no-fade">
+{{ checkout_success }}
+
+<p></p>
+Your order number is {{ order_number }}.
+<p></p>
+Please bring your method of payment when picking up your order.
+
+
+<div class="image-container-emoji">
+    <img src="{% static "photos/celebrate_emoji.png" %}" alt="celebrate_emoji">
+</div>
+
+
+<p></p>
+<form method="POST" action="{% url 'homepage' %}">
+    {% csrf_token %}
+    <button type="submit">Homepage</button>
+</form>

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <h1>Appetizers</h1>
+
+    <ul class="menu_page">
+
+        {% for item in Appetizer_items %}
+
+
+            <li>
+                <div class=menu_item_link>
+                    <a href="{% url "appetizers_detail" item.id %}">
+
+
+                        {{ item.appetizer_name }}: ${{ item.appetizer_price }}
+
+                    </a>
+
+
+                </div>
+
+
+                <a href="{% url "appetizers_detail" item.id %}">
+                    <img src="{{ item.appetizer_image.url }}" width="300">
+                </a>
+
+            </li>
+        {% empty %}
+            <p>No Item to Display apps</p>
+        {% endfor %}
+    </ul>
+
+    <div class="bottom_links">
+
+        <form method="POST" action="{% url 'homepage' %}">
+            {% csrf_token %}
+            <button type="submit">Homepage</button>
+        </form>
+        <p>
+
+    </div>
+
+
+{% endblock %}
+
+

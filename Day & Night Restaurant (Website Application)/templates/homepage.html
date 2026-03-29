@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <h1>Homepage</h1>
+
+
+    <h2><p style="text-align: center;">{{ homepage_message }}</p> </h2>
+
+
+
+    <div class="image-container">
+        <img src="{% static 'photos/restaurant_pic2.jpg' %}" alt="restaurant_pic2">
+
+    </div>
+
+
+{% endblock %}

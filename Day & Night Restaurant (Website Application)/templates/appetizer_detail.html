@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>{{ appetizer_index.appetizer_name }}</title>
+
+
+
+    <h2>{{ appetizer_index.appetizer_name }}</h2>
+
+
+    <p><strong>Description:</strong> {{ appetizer_index.appetizer_description }}</p>
+    <p><strong>Price:</strong> ${{ appetizer_index.appetizer_price }}</p>
+
+    <img src="{{ appetizer_index.appetizer_image.url }}" width="700">
+
+
+    <p></p>
+
+    <form method="POST" action="{% url 'appetizers' %}">
+        {% csrf_token %}
+        <button type="submit"> Appetizers</button>
+    </form>
+
+    <p></p>
+
+    <form method="POST" action="{% url 'take_out' %}">
+        {% csrf_token %}
+        <button type="submit"> Order Takeout</button>
+    </form>
+
+{% endblock %}
+
+
+

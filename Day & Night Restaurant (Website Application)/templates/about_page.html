@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h1>About</h1>
+    {{ about_us_message }}
+    Day & Night is an upscale restaurant that has food for everyone and is open 24/7!
+    <p></p>
+    The website for the restaurant was created by a young software developer named Mark who is from Philadelphia Pennsylvania.
+    <p></p>
+    Mark has recently completed his studies and obtained his official certification in Python Programming.
+    <p></p>
+    This website was created entirely in Django and is very user-friendly.
+    <p></p>
+    On this website, you will be able to view our entire menu, create reservations and take out orders,
+    create an account, and reset your password if you forgot it.
+    <p></p>
+    We strive to provide the best experience possible for you.
+    <p></p>
+    If you have any questions, comments, or concerns about the website, please reach out to our developer Mark.
+    <p></p>
+
+    <p></p>
+    -------------------------------------------------------------------------------------------------------------------------------------------------
+    <p></p>
+
+    Mark (Backend Software Developer |Python|Django)
+    <p></p>
+    215-913-8771
+    <p></p>
+    Markiq1616@gmail.com
+
+
+
+    <p></p>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+       <div class="image-container">
+        <img src="{% static 'photos/About_Photo.jpg' %}" alt="about_photo">
+
+    </div>
+
+    <div class="bottom_links">
+        <form method="POST" action="{% url 'homepage' %}">
+            {% csrf_token %}
+            <button type="submit">Homepage</button>
+        </form>
+    </div>
+{% endblock %}
+
+
+

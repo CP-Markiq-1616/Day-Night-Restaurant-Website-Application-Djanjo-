@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<body class="no-fade">
+
+
+{{ success }}
+
+
+<div class="image-container-emoji">
+    <img src="{% static 'photos/celebrate_emoji.png' %}" alt="celebrate_emoji">
+</div>
+
+
+<p></p>
+<form method="POST" action="{% url 'homepage' %}">
+    {% csrf_token %}
+    <button type="submit">Homepage</button>
+</form>
+
+
+

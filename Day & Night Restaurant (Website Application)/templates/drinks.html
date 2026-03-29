@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+    <h1>Drinks</h1>
+
+
+    {% if drinks %}
+
+
+        <ul class="menu_page">
+
+            {% for item in drinks %}
+
+                <li>
+                    <div class=menu_item_link>
+                        <a href="{% url "drink_detail" item.id %}">
+
+                            {{ item.drink_name }}: ${{ item.drink_price }}
+                        </a>
+                    </div>
+
+
+
+                    <a href="{% url "drink_detail" item.id %}">
+                        <img src="{{ item.drink_image.url }}" width="300">
+                    </a>
+
+                </li>
+
+
+            {% endfor %}
+
+        </ul>
+    {% else %}
+        <p>No Item to Display</p>
+
+    {% endif %}
+
+
+    <div class="bottom_links">
+
+        <form method="POST" action="{% url 'homepage' %}">
+            {% csrf_token %}
+            <button type="submit">Homepage</button>
+        </form>
+        <p>
+
+    </div>
+{% endblock %}
+
