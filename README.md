@@ -109,7 +109,7 @@ Once the new password is set, you will be prompted to log in.
 
 <br> 
 
-<img width="1500" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/b8d7a26d-b2c4-4f4f-b70d-6bd7eb94293f" />
+<img width="800" height="600" alt="Forgot Password Readme" src="https://github.com/user-attachments/assets/b8d7a26d-b2c4-4f4f-b70d-6bd7eb94293f" />
 
 
 <img width="1500" height="600" alt="Send Link Readme" src="https://github.com/user-attachments/assets/6def55fa-0791-478c-8d2a-c23dfc38c1d7" />
@@ -119,11 +119,11 @@ Once the new password is set, you will be prompted to log in.
 
 <img width="1500" height="600" alt="Link Sent Readme" src="https://github.com/user-attachments/assets/ea688e6a-76c5-484a-b395-1ce9b96d1cf4" />
 
-<img width="1500" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/d9cd8ab4-f5a9-472f-8b2f-c31549135b89" />
+<img width="800" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/d9cd8ab4-f5a9-472f-8b2f-c31549135b89" />
 
 
-<img width="1500" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8e6e703b-cca8-46ad-9200-23a6d8846b1f" />
+<img width="800" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8e6e703b-cca8-46ad-9200-23a6d8846b1f" />
 
 
-<img width="1500" height="600" alt="Login Return Readme" src="https://github.com/user-attachments/assets/eff0127f-7118-4b02-99a6-fa0208c34e25" />
+<img width="800" height="600" alt="Login Return Readme" src="https://github.com/user-attachments/assets/eff0127f-7118-4b02-99a6-fa0208c34e25" />
 
