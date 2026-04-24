@@ -117,7 +117,7 @@ Once the new password is set, you will be prompted to log in.
 <img width="800" height="600" alt="Link Sent Readme (2)" src="https://github.com/user-attachments/assets/0798533a-e4a0-492d-b332-dcaea21bd17e" />
 
 
-<img width="800" height="600" alt="Link Sent Readme" src="https://github.com/user-attachments/assets/ea688e6a-76c5-484a-b395-1ce9b96d1cf4" />
+<img width="1500" height="600" alt="Link Sent Readme" src="https://github.com/user-attachments/assets/ea688e6a-76c5-484a-b395-1ce9b96d1cf4" />
 
 <img width="800" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/d9cd8ab4-f5a9-472f-8b2f-c31549135b89" />
 
