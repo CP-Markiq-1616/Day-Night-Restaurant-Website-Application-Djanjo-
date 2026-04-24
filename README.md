@@ -8,7 +8,7 @@ Website link: https://day-night-restaurant.duckdns.org
 
 <br> 
 
-## Overwiew
+## Overview
 
 This is a full-stack restaurant web application built with Django. The platform allows users to explore the restaurant, browse the menu, and interact with a mock ordering & reservation system in a clean and user-friendly interface.
 My primary specialty is backend development with Python & Django however HTML and CSS was needed to render webpages and to make the site appealing. 
