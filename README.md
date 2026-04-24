@@ -122,7 +122,7 @@ Once the new password is set, you will be prompted to log in.
 <img width="800" height="600" alt="Password Update Reademe" src="https://github.com/user-attachments/assets/d9cd8ab4-f5a9-472f-8b2f-c31549135b89" />
 
 
-<img width="800" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8e6e703b-cca8-46ad-9200-23a6d8846b1f" />
+<img width="1500" height="600" alt="Password Reset Complete Readme" src="https://github.com/user-attachments/assets/8e6e703b-cca8-46ad-9200-23a6d8846b1f" />
 
 
 <img width="800" height="600" alt="Login Return Readme" src="https://github.com/user-attachments/assets/eff0127f-7118-4b02-99a6-fa0208c34e25" />
