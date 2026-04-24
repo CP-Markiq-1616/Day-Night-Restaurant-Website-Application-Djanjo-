@@ -101,7 +101,7 @@ At this point, the link will come to the backend server for only the developer t
 
 **Please contact me directly by email (Markiq1616@gmail.com) for the reset link, or it can be done via live demonstration on a video call. Otherwise, simply create a new account with a new password.**
 
-If you have retreived the link from me, paste it into your browser and you will be prompted to create a new password.
+If you have retrieved the link from me, paste it into your browser and you will be prompted to create a new password.
 
 Once the new password is set, you will be prompted to log in.
 
