@@ -99,7 +99,7 @@ Once the email address is entered, click "Reset My Password". You will now see a
 
 At this point, the link will come to the backend server for only the developer to see. 
 
-**Please contact me directly by email (Markiq1616@gmail.com) for the reset link, or it can be done via live demonstration on a video call. Otherwise, simply create a new account with a new password.**
+**Please contact me directly by email (CpMark.py@gmail.com) for the reset link, or it can be done via live demonstration on a video call. Otherwise, simply create a new account with a new password.**
 
 If you have retrieved the link from me, paste it into your browser and you will be prompted to create a new password.
 
